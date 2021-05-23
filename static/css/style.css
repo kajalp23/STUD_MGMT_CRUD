@@ -1,0 +1,72 @@
+.jumbo1,.jumbo2{
+    margin-top: 10px;
+    height:70px;
+    padding:5px 0 !important;
+    margin-bottom: 15px;
+    background-color: rgba(11,156,49,0.2);
+}
+
+.attrib{
+    width:100%;
+    height:35px;
+    font-size: 15px;
+    border: 1px solid rgb(165, 162, 162);
+}
+
+#errmsg{
+    font-size: 15px;
+    color: green;
+    text-align: center;
+}
+
+tr{
+    border-bottom: 1px solid rgb(221, 219, 219);
+    
+}
+
+#stuinfo{
+    text-align: center;
+    font-family:Trebuchet MS ;
+    color:  rgb(0, 100, 0);
+    letter-spacing: 1px;
+}
+
+#stuinfo1{
+    text-align: center;
+    font-family: Trebuchet MS;
+    color:  rgb(0, 100, 0);
+    letter-spacing: 1px;
+}
+
+/* table{
+    margin-top: 10px; */
+    /* border: 1px solid black;
+    border-collapse: collapse; */
+/* } */
+
+th{
+    font-family:Tahoma;
+    width: 180px;
+    font-size: 15px;
+    border-top: 1px solid rgb(221, 219, 219);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+td{
+    /* border: 1px solid black;
+    border-collapse: collapse; */
+    font-family:Tahoma;
+    width: 180px;
+    font-size: 15px;
+    padding: 10px 0 10px 0;
+    letter-spacing: 1px;
+}
+
+.coladj{
+    margin-left: 65px;
+}
+
+#para{
+    margin-bottom: 0;
+}

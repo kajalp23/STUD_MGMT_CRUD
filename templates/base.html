@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    {% block css %}{% endblock css %}
+
+    <style>
+        /* .jumbotron {
+            min-width: 585px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            margin: 10px 150px 10px 150px;
+            border: 0.08em solid black;
+        } */
+        .jumbo{
+            margin-top: 10px;
+            height:auto;
+            padding:5px 0 !important;
+            margin-bottom: 15px;
+            background-color: rgba(255, 99, 71, 0.2);
+        }
+        #hme{
+            text-align: center;
+            color: #a02f06;
+            font-weight: bold;
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbo">
+            <h2 id="hme">Student Management System</h2>
+        </div>
+        
+    </div>
+
+    {% block content %}{% endblock content %}
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+</body>
+</html>

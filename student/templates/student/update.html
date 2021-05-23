@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Update{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-3 coladj">
+        <div class="jumbotron jumbo1">
+            <div class="container">
+                <h3 style="text-align: center;" id="stuinfo1">Update Student</h3>
+                
+                    
+            </div>   
+        </div>
+
+        
+        <form action="" method="POST">
+            {% csrf_token %}
+            <p id="errmsg">{{msg}}</p>
+            <label for="id_name">Name:</label> <br>
+            <input type="text" name="name" class="attrib" required id="id_name" value={{form.name}}>
+            <br><br>
+
+            
+            <label for="id_email">Email:</label> <br>
+            <input type="email" name="email" class="attrib" required id="id_email" value={{form.email}}>
+            <br><br>
+
+            
+            <label for="id_password">Password:</label> <br>
+            <input type="password" name="password" class="attrib" required id="id_password" value={{form.password}}>
+            <br><br>
+            
+                    
+            <button class="btn btn-md btn-primary">Update</button>
+
+            <a href="{% url 'index' %}" class="btn btn-primary">Return To Home</a>
+        </form>
+
+    </div>
+
+    
+
+    <div class="col-md-6">
+        <div class="jumbotron jumbo2">
+            <div class="container">
+                <h3 id="stuinfo">Show Student Information</h3>
+                 <p></p>   
+            </div>   
+        </div>
+            <div class="container">
+                    <table>
+                        <tr>
+                            <th><h4> ID </h4></th>
+                            <th><h4> Name </h4></th>
+                            <th><h4> Email </h4></th>
+                            <th><h4> Action </h4></th>
+                        </tr>
+
+                        
+                        {% for i in mobj %}
+                            <tr>
+                                <td>{{i.id}} </td>
+                                <td>{{i.name}} </td>
+                                <td>{{i.email}} </td>
+                                <td><a class="btn btn-sm btn-warning" href="{% url 'update' i.id %}">Edit </a> <a class="btn btn-sm btn-danger" href="{% url 'delete' i.id %}">Delete</a></td>
+                            </tr>
+                            
+                        {% endfor %}
+                    </table>
+            </div>   
+        
+    </div>
+   
+
+</div>
+
+
+
+
+
+
+{% endblock content %}
