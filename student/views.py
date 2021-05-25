@@ -4,25 +4,6 @@ from student.forms import studReg
 
 # Create your views here.
 
-# def get(self, request, mail, template_name='modifyPatient.html'):
-#         thatPatient = Patient.objects.filter(email=mail)
-#         thatPatient = thatPatient[0]
-#         args = {}
-#         args["pat"] = thatPatient
-#         return render(request, template_name, args)
-
-#     def post(self, request, mail, template_name='modifyPatient.html'):
-#         currentStatus = request.POST.get('currentStatus')
-#         remarks = request.POST.get('remarks')
-#         ventilator = request.POST.get('ventilator')
-#         if ventilator == "No":
-#             ventilator = False
-#         else:
-#             ventilator = True
-#         operatedByDoctor = request.POST.get('operatedByDoctor')
-#         Patient.objects.filter(email=mail).update(currentStatus=currentStatus, remarks=remarks, ventilator=ventilator, operatedByDoctor=operatedByDoctor)
-#         return render(request, template_name, {"errorMessage": "Changes Done Successfully"})
-
 
 def update(request,up_id):
     if request.method=="POST":
