@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,HttpResponseRedirect
 from student.models import Stud
 from student.forms import studReg
 
@@ -18,6 +18,7 @@ def update(request,up_id):
             err_msg = {'msg':'Student Updated Successfully','form':fm,'mobj':fobj}
 
             return render(request,'index.html',err_msg)
+
     else:
         thatStu = Stud.objects.filter(id=up_id)
         thatStu = thatStu[0]
